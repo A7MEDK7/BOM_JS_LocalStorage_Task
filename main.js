@@ -8,10 +8,20 @@ let btn = document.querySelector("button");
 
 if (window.localStorage.getItem("color")) {
     screen.style.backgroundColor = window.localStorage.getItem("color");
+    colours.forEach(color => {
+        if (color.classList[0] === screen.style.backgroundColor) {
+            color.style.opacity = "100%";
+        } else {
+            color.style.opacity = "40%";
+        }
+    })
 } else {
     colours.forEach(color => {
         if (color.hasAttribute("state")) {
             screen.style.backgroundColor = color.classList[0];
+            color.style.opacity = "100%";
+        } else {
+            color.style.opacity = "40%";
         }
     })
 }
@@ -24,6 +34,13 @@ redBtn.onclick = function() {
             color.removeAttribute("state")
         }
         redBtn.setAttribute("state","active");
+        colours.forEach(color => {
+            if (color.hasAttribute("state")) {
+                color.style.opacity = "100%";
+            } else {
+                color.style.opacity = "40%";
+            }
+        })
     });
 };
 blueBtn.onclick = function() {
@@ -34,6 +51,13 @@ blueBtn.onclick = function() {
             color.removeAttribute("state")
         }
         blueBtn.setAttribute("state","active");
+        colours.forEach(color => {
+            if (color.hasAttribute("state")) {
+                color.style.opacity = "100%";
+            } else {
+                color.style.opacity = "40%";
+            }
+        })
     });
 };
 greenBtn.onclick = function() {
@@ -44,6 +68,13 @@ greenBtn.onclick = function() {
             color.removeAttribute("state")
         }
         greenBtn.setAttribute("state","active");
+        colours.forEach(color => {
+            if (color.hasAttribute("state")) {
+                color.style.opacity = "100%";
+            } else {
+                color.style.opacity = "40%";
+            }
+        })
     });
 };
 yellowBtn.onclick = function() {
@@ -54,6 +85,13 @@ yellowBtn.onclick = function() {
             color.removeAttribute("state")
         }
         yellowBtn.setAttribute("state","active");
+        colours.forEach(color => {
+            if (color.hasAttribute("state")) {
+                color.style.opacity = "100%";
+            } else {
+                color.style.opacity = "40%";
+            }
+        })
     });
 };
 
