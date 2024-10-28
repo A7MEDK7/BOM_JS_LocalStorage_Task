@@ -22,5 +22,3 @@ This project demonstrates the use of JavaScript BOM and localStorage to create a
 
 - JavaScript (BOM & localStorage)
 - HTML/CSS
-
-   git clone https://github.com/a7medk7/BOM_JS_LocalStorage_Task.git
